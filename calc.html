@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Tip-Calculator</title>
+    <link href="calc.jpg" type="image/jpg" rel="icon"/>
+    <style>
+.tip{
+    font-weight:bold;
+    font-size: 3em;
+   position: center;
+}
+div{
+    margin-left:26% ;
+   
+}
+input[type="text"]{
+    width: 19em;
+   height:2.5em;
+}
+button{
+  height:2.5em;
+  background: lightgrey;  
+}
+#outPut{
+    margin-top:3%; 
+    font-size: 3em;
+    border-top: 1px solid black;
+   width: 100%;
+
+}
+        </style>
+    </head>
+    <body>
+      <div>
+          <p class="tip"> <img src="calc.jpg"/> Tip CALCULATOR</p>
+      <input type="text" id="subtotal"> $ Subtotal<br/><br>
+      <input type="text" id="tip"> %Tip<br></br>
+      <button onclick="foo();" >Calculate Tip</button>
+       </div>
+       <div id="outPut"><u></u>
+           Your total:
+        <p id="yourtip" >$0.00</p> 
+
+       </div>
+
+       <script>
+           
+         function foo(){
+            var subTot=document.getElementById("subtotal").value;
+            var tip=document.getElementById("tip").value;
+             var result=document.getElementById("yourtip");
+            result.innerHTML="$"+(tip/100)*subTot;
+
+             }
+           </script>
+    </body>
+</html>
